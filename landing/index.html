@@ -432,7 +432,7 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
             display: inline-block;
@@ -451,7 +451,7 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             transition: all 0.3s ease;
             border: 2px solid var(--primary-green);
             display: inline-block;
@@ -739,7 +739,7 @@
         }
 
         .workflow-section .workflow-step h5 {
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 0.5rem;
@@ -835,6 +835,22 @@
             color: white;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
             animation: iconBounce 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .feature-card-header {
+            display: block;
+        }
+
+        .feature-card-header .feature-icon {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0;
         }
 
         @keyframes iconBounce {
@@ -1301,7 +1317,7 @@
         }
 
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             color: var(--text-gray);
             font-weight: 600;
         }
@@ -1924,7 +1940,7 @@
         }
 
         .progress-details-title {
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 0.75rem;
@@ -2078,33 +2094,39 @@
 
             /* Hero Section */
             .hero {
-                padding: 100px 1rem 2rem;
-                min-height: 90vh;
+                padding: 80px 1rem 2rem;
+                min-height: auto;
+                height: auto;
+            }
+
+            .hero-content {
+                padding: 30px 20px;
             }
 
             .hero h1 {
                 font-size: 2rem;
                 line-height: 1.3;
-                margin-bottom: 1rem;
+                margin-bottom: 0.875rem;
             }
 
             .hero p {
                 font-size: 1rem;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
+                margin-bottom: 1.25rem;
+                padding: 0;
             }
 
             .hero-buttons {
                 flex-direction: column;
-                gap: 0.75rem;
+                gap: 0.625rem;
                 width: 100%;
-                padding: 0 1rem;
+                padding: 0;
+                margin-top: 1rem;
             }
 
             .btn-primary,
             .btn-secondary {
                 width: 100%;
-                padding: 0.875rem 1.5rem;
+                padding: 0.875rem 1.25rem;
                 font-size: 1rem;
             }
 
@@ -2122,7 +2144,7 @@
             .process,
             .about,
             .cta-section {
-                padding: 60px 1rem;
+                padding: 32px 1rem;
             }
 
             .container {
@@ -2131,7 +2153,7 @@
 
             /* Section Headers */
             .section-header {
-                margin-bottom: 2.5rem;
+                margin-bottom: 2rem;
             }
 
             .section-header h2 {
@@ -2149,81 +2171,125 @@
             .plots-grid,
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
 
             /* Feature Cards */
             .feature-card {
-                padding: 1.5rem;
+                padding: 1rem;
+            }
+
+            /* Feature Card Header - Icon and Title on same line */
+            .feature-card-header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 0.75rem;
             }
 
             .feature-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+
+            .feature-card-header h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                line-height: 1.3;
+                flex: 1;
             }
 
             .feature-card h3 {
-                font-size: 1.25rem;
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                line-height: 1.3;
+                flex: 1;
             }
 
             .feature-card p {
                 font-size: 0.95rem;
+                margin-top: 0.5rem;
             }
 
             /* Plot Cards */
             .plot-card {
-                padding: 1.5rem;
+                padding: 1rem;
+            }
+
+            .plot-header {
+                margin-bottom: 1rem;
             }
 
             .plot-name {
                 font-size: 1.25rem;
+                margin-bottom: 0.5rem;
             }
 
             .plot-description {
                 font-size: 0.9rem;
+                margin-bottom: 0.875rem;
+            }
+
+            .plot-boundary {
+                padding: 0.75rem;
                 margin-bottom: 1rem;
             }
 
             .plot-metrics {
-                gap: 0.75rem;
+                gap: 0.625rem;
             }
 
             .metric-item {
-                padding: 0.75rem;
+                padding: 0.625rem;
             }
 
             .metric-label {
                 font-size: 0.8rem;
+                margin-bottom: 0.375rem;
             }
 
             .metric-value {
                 font-size: 1.25rem;
             }
 
+            .metric-progress {
+                margin-top: 0.375rem;
+            }
+
+            .plot-actions {
+                margin-top: 1rem;
+            }
+
             .btn-view-map {
-                padding: 0.625rem 1.25rem;
+                padding: 0.625rem 1rem;
                 font-size: 0.9rem;
             }
 
             /* About Section */
             .about-tabs {
                 gap: 0.5rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
                 padding-bottom: 0.75rem;
             }
 
             .about-tab {
-                padding: 0.75rem 1rem;
+                padding: 0.625rem 0.875rem;
                 font-size: 0.85rem;
             }
 
             .about-content-card {
-                padding: 1.5rem;
+                padding: 1rem;
             }
 
             .about-content-card h3 {
                 font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .about-content-card > p {
                 margin-bottom: 1.5rem;
             }
 
@@ -2231,31 +2297,49 @@
             .user-roles-grid,
             .value-proposition-list {
                 grid-template-columns: 1fr;
-                gap: 1.25rem;
+                gap: 1rem;
+                margin-top: 1.5rem;
             }
 
             .core-idea-item,
             .user-role-card,
             .value-item {
-                padding: 1.5rem;
+                padding: 1rem;
+            }
+
+            .core-idea-item h4,
+            .user-role-card h4,
+            .value-item h4 {
+                margin-bottom: 0.75rem;
             }
 
             .user-role-icon {
                 font-size: 2.5rem;
+                margin-bottom: 0.75rem;
             }
 
             .workflow-steps {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
+                margin-top: 1.5rem;
             }
 
             .workflow-section {
-                padding: 1.5rem;
+                padding: 1rem;
+            }
+
+            .workflow-section h4 {
+                margin-bottom: 1rem;
+            }
+
+            .workflow-section .workflow-step {
+                margin-bottom: 1rem;
+                padding-left: 1.25rem;
             }
 
             /* Process Section */
             .process-step-card {
-                padding: 1.5rem;
+                padding: 1rem;
                 max-width: 100%;
             }
 
@@ -2263,6 +2347,7 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 0.75rem;
+                margin-bottom: 1rem;
             }
 
             .step-number-badge {
@@ -2276,11 +2361,17 @@
             }
 
             .step-title {
-                font-size: 1.1rem;
+                font-size: 1.0rem;
+                margin-bottom: 0.625rem;
             }
 
             .step-description {
                 font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            .step-features {
+                margin-top: 0.75rem;
             }
 
             .process-arrow {
@@ -2289,60 +2380,84 @@
             }
 
             .process-progress {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .progress-header {
+                margin-bottom: 1.5rem;
             }
 
             .progress-title {
                 font-size: 1.5rem;
+                margin-bottom: 0.5rem;
             }
 
             .progress-stats {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
+                gap: 0.75rem;
+                margin: 1.5rem 0;
             }
 
             .progress-stat {
-                padding: 1rem;
+                padding: 0.875rem;
             }
 
             .stat-icon {
                 font-size: 2rem;
+                margin-bottom: 0.375rem;
             }
 
             .stat-value {
                 font-size: 1.5rem;
+                margin-bottom: 0.25rem;
             }
 
             .progress-percentage {
                 font-size: 2rem;
+                margin: 1rem 0;
+            }
+
+            .progress-bar-container {
+                margin: 1.5rem 0;
+            }
+
+            .progress-steps {
+                margin-top: 1.5rem;
+            }
+
+            .progress-details {
+                margin-top: 1.5rem;
+                padding: 1rem;
             }
 
             /* Statistics */
             .stats-tabs {
                 gap: 0.5rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
             }
 
             .stat-tab {
-                padding: 0.75rem 1rem;
+                padding: 0.625rem 0.875rem;
                 font-size: 0.85rem;
             }
 
             .stat-card {
-                padding: 1.5rem;
+                padding: 1rem;
             }
 
             .stat-icon {
                 font-size: 2.5rem;
+                margin-bottom: 0.75rem;
             }
 
             .stat-number {
                 font-size: 2rem;
+                margin-bottom: 0.375rem;
             }
 
             /* CTA Section */
             .cta-section h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .cta-section p {
@@ -2362,12 +2477,23 @@
 
         /* Small Mobile (max-width: 480px) */
         @media (max-width: 480px) {
+            .hero {
+                padding: 70px 1rem 1.5rem;
+            }
+
             .hero h1 {
                 font-size: 1.75rem;
+                margin-bottom: 0.75rem;
             }
 
             .hero p {
                 font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-buttons {
+                gap: 0.5rem;
+                margin-top: 0.875rem;
             }
 
             .section-header h2 {
@@ -2379,30 +2505,58 @@
             }
 
             .about-tab {
-                padding: 0.625rem 0.75rem;
+                padding: 0.5rem 0.625rem;
                 font-size: 0.75rem;
             }
 
             .about-content-card {
-                padding: 1.25rem;
+                padding: 0.875rem;
             }
 
             .about-content-card h3 {
                 font-size: 1.25rem;
+                margin-bottom: 0.875rem;
+            }
+
+            .about-content-card > p {
+                margin-bottom: 1.25rem;
             }
 
             .feature-card,
             .plot-card,
             .stat-card {
-                padding: 1.25rem;
+                padding: 0.875rem;
+            }
+
+            .core-idea-item,
+            .user-role-card,
+            .value-item {
+                padding: 0.875rem;
+            }
+
+            .workflow-section {
+                padding: 0.875rem;
             }
 
             .process-step-card {
-                padding: 1.25rem;
+                padding: 0.875rem;
+            }
+
+            .process-progress {
+                padding: 1.25rem 0.875rem;
+            }
+
+            .progress-stat {
+                padding: 0.75rem;
+            }
+
+            .progress-details {
+                padding: 0.875rem;
             }
 
             .progress-stats {
                 grid-template-columns: 1fr;
+                gap: 0.625rem;
             }
 
             .progress-percentage {
@@ -2410,11 +2564,27 @@
             }
 
             .plot-name {
-                font-size: 1.1rem;
+                font-size: 1.0rem;
+            }
+
+            .metric-item {
+                padding: 0.5rem;
             }
 
             .metric-value {
-                font-size: 1.1rem;
+                font-size: 1.0rem;
+            }
+
+            .plot-boundary {
+                padding: 0.625rem;
+            }
+
+            .benefit-item {
+                padding: 1.25rem;
+            }
+
+            .revenue-chart {
+                padding: 1.25rem;
             }
         }
 
@@ -2543,7 +2713,7 @@
             <div id="core-idea" class="about-content active">
                 <div class="about-content-card fade-in">
                     <h3>💡 Ý tưởng Cốt lõi</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
+                    <p style="font-size: 1.0rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
                         AVIVerse NFT là nền tảng quản lý toàn bộ vòng đời sản xuất nông nghiệp, 
                         từ khâu thiết lập đến thu hoạch và phân phối, kết hợp công nghệ IoT, AI và Blockchain NFT.
                     </p>
@@ -2580,7 +2750,7 @@
             <div id="user-roles" class="about-content">
                 <div class="about-content-card fade-in">
                     <h3>👥 Đối tượng & Vai trò Người dùng</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
+                    <p style="font-size: 1.0rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
                         Hệ thống phục vụ đa dạng đối tượng người dùng với vai trò và quyền lợi riêng biệt.
                     </p>
                     <div class="user-roles-grid">
@@ -2637,7 +2807,7 @@
             <div id="value-prop" class="about-content">
                 <div class="about-content-card fade-in">
                     <h3>⭐ Giá trị Cốt lõi</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
+                    <p style="font-size: 1.0rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
                         AVIVerse NFT mang lại giá trị thiết thực cho từng đối tượng trong hệ sinh thái nông nghiệp.
                     </p>
                     <div class="value-proposition-list">
@@ -2677,7 +2847,7 @@
             <div id="workflow" class="about-content">
                 <div class="about-content-card fade-in">
                     <h3>🔄 Quy trình Nghiệp vụ Tổng thể</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
+                    <p style="font-size: 1.0rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8;">
                         Hai vòng đời chính: Sản xuất (Off-chain + IoT) và NFT & Đầu tư (On-chain + Off-chain).
                     </p>
                     <div class="workflow-steps">
@@ -2739,8 +2909,10 @@
 
             <div class="features-grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Quản lý Khu vực & Trang trại</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Quản lý Khu vực & Trang trại</h3>
+                    </div>
                     <p>
                         Quản lý phân cấp từ Tỉnh → Huyện → Xã → Trang trại → Vùng trồng. 
                         Vẽ bản đồ lô đất chính xác với GeoJSON Polygon, tính diện tích tự động.
@@ -2748,8 +2920,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">📅</div>
-                    <h3>Quản lý Mùa vụ & Giống cây</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">📅</div>
+                        <h3>Quản lý Mùa vụ & Giống</h3>
+                    </div>
                     <p>
                         Theo dõi toàn bộ vòng đời mùa vụ từ gieo trồng đến thu hoạch. 
                         Danh mục giống cây với thông tin kỹ thuật chi tiết, quy trình canh tác chuẩn.
@@ -2757,8 +2931,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">✅</div>
-                    <h3>Nhiệm vụ & Nhật ký Canh tác</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">✅</div>
+                        <h3>Nhiệm vụ & Nhật ký</h3>
+                    </div>
                     <p>
                         Tạo và quản lý nhiệm vụ canh tác (tưới, bón phân, phun thuốc...). 
                         Nhật ký điện tử chuẩn truy xuất nguồn gốc với hình ảnh kèm theo.
@@ -2766,8 +2942,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">🌐</div>
-                    <h3>IoT & Cảm biến Thông minh</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">🌐</div>
+                        <h3>IoT & Cảm biến</h3>
+                    </div>
                     <p>
                         Tích hợp cảm biến môi trường (độ ẩm, nhiệt độ, pH, ánh sáng). 
                         Cảnh báo tự động và gợi ý tưới, bón phân tối ưu dựa trên dữ liệu thực tế.
@@ -2775,8 +2953,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">🔗</div>
-                    <h3>Blockchain & NFT</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">🔗</div>
+                        <h3>Blockchain & NFT</h3>
+                    </div>
                     <p>
                         Số hoá lô trang trại thành NFT để gọi vốn minh bạch. 
                         Farm Plot NFT, Seasonal Harvest NFT, Experience NFT với quyền lợi rõ ràng.
@@ -2784,8 +2964,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">📱</div>
-                    <h3>Truy xuất Nguồn gốc</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">📱</div>
+                        <h3>Truy xuất Nguồn gốc</h3>
+                    </div>
                     <p>
                         Mỗi sản phẩm có mã QR truy xuất đầy đủ thông tin: trang trại, lô, 
                         nhật ký chăm sóc, chuẩn chứng nhận. Minh bạch và đáng tin cậy.
@@ -2793,8 +2975,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI Dự báo & Phân tích</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI Dự báo & Phân tích</h3>
+                    </div>
                     <p>
                         Dự báo năng suất, cảnh báo sâu bệnh sớm. Phân tích dữ liệu IoT 
                         để đưa ra khuyến nghị canh tác thông minh, tối ưu hiệu quả.
@@ -2802,8 +2986,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">👥</div>
-                    <h3>Đa Vai trò Người dùng</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">👥</div>
+                        <h3>Đa Vai trò</h3>
+                    </div>
                     <p>
                         Hệ thống hỗ trợ Nông dân, Nhà đầu tư, Doanh nghiệp phân phối, 
                         và Quản trị viên với quyền hạn và giao diện phù hợp từng đối tượng.
@@ -2811,8 +2997,10 @@
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">💳</div>
-                    <h3>Thanh toán & Tài chính</h3>
+                    <div class="feature-card-header">
+                        <div class="feature-icon">💳</div>
+                        <h3>Thanh toán & Tài chính</h3>
+                    </div>
                     <p>
                         Hệ thống thanh toán tích hợp, ví điện tử, quản lý dòng tiền minh bạch. 
                         Thanh toán NFT, chia sẻ lợi nhuận tự động qua smart contract blockchain.
@@ -3428,7 +3616,7 @@
                 <div class="process-progress fade-in">
                     <div class="progress-header">
                         <h3 class="progress-title">📊 Tiến độ Triển khai</h3>
-                        <p style="color: var(--text-gray); font-size: 1.1rem;">Theo dõi quá trình số hóa trang trại của bạn</p>
+                        <p style="color: var(--text-gray); font-size: 1.0rem;">Theo dõi quá trình số hóa trang trại của bạn</p>
                     </div>
 
                     <!-- Statistics -->
@@ -3513,7 +3701,7 @@
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
-            <h2>Bắt đầu Hành trình Nông nghiệp Thông minh</h2>
+            <h2>Bắt đầu Hành trình  <br>     Nông nghiệp Thông minh</h2>
             <p>Tham gia cùng hàng ngàn nông dân và nhà đầu tư đã tin tưởng AVIVerse NFT</p>
             <div class="hero-buttons">
                 <a href="http://localhost:3001/login" class="btn-primary" style="background: white; color: var(--primary-green);">
